@@ -15,6 +15,7 @@
     --main-btn-background-color:var(--third-color);
     --secondary-btn-text-color:var(--first-color);
     --studio-hover-color:#188CE8;
+    --border-basic-color:#AFB1B8;
  }
  html{
     box-sizing: border-box;
@@ -178,7 +179,7 @@ img{
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        max-width: 1200px;
+        max-width: 1600px;
         height: 600px;
         padding: 200px 0;
         margin: 0 auto;
@@ -402,7 +403,7 @@ img{
     fill: var(--header-background-color);
 }
 .team-icon-svg{
-    fill: #AFB1B8;
+    fill: var(--border-basic-color);
 }
 .team-social{
     display: flex;
@@ -432,17 +433,17 @@ img{
     justify-content: center;
     align-items: center;
 }
-.client-item{
+.client-link{
     width: 170px;
     height: 92px;
-    border: 1px solid #AFB1B8;
+    border: 1px solid var(--border-basic-color);
     display: flex;
     align-items: center;
     justify-content: center;
    /* background-position: center; */
 }
-.client-item:hover,
-.client-item:focus{
+.client-link:hover,
+.client-link:focus{
     outline: 1px solid var(--third-color);
 }
 .client-link:hover .client1,
@@ -469,10 +470,10 @@ img{
 .client-link:focus .client6 {
     fill: var(--third-color);
 }
-.client-item:hover,
+/* .client-item:hover,
 .client-item:focus{
     fill:var(--third-color);
-}
+} */
 .client-item
 .client1,
 .client2,
@@ -480,7 +481,7 @@ img{
 .client4,
 .client5,
 .client6{
-       fill: #AFB1B8;
+       fill: var(--border-basic-color);
 }
 .footer {
     background-color: var(--footer-background-color);
@@ -534,6 +535,7 @@ img{
 }
 .footer .container{
     display: flex;
+    align-items: baseline;
 }
 .footer-title{
     font-family: 'Roboto';
@@ -545,7 +547,6 @@ img{
     text-transform: uppercase;
     color: var(--main-text-color);
     margin-bottom: 20px;
-    padding-top: 12px;
 }
 .footer-add-social{
     margin-left: 70px;
@@ -615,6 +616,7 @@ img{
 .portfolio-link{
     display: block;
     outline: none;
+    text-decoration: none;
 }
 .card-set{
     margin: -15px;
