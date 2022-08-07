@@ -106,6 +106,19 @@ img{
         display: flex;
         margin-left: 57px;
  }
+ .active{
+    position: relative;
+ }
+ .active::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 4px;
+    left: 0;
+    border-radius: 2px;
+    bottom: -1.5px;
+    background-color: var(--third-color);
+ }
 .contacts-list{
     display: flex;
     gap: 50px;
@@ -143,12 +156,6 @@ img{
 }
 .container-border{
     border-bottom: 1px solid #ECECEC;
-}
-.nav-emphasis::after{
-    content:'';
-    width: 60px;
-    height: 10px;
-    background-color: #188CE8;
 }
 .icon-envelope{
     margin-right: 10px;
@@ -473,7 +480,7 @@ img{
     align-items: center;
     justify-content: center;
    /* background-position: center; */
- transition: border 2500ms cubic-bezier(0.4, 0, 0.2, 1);   
+ transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);   
 }
 .client-link:hover,
 .client-link:focus{
@@ -515,7 +522,7 @@ img{
 .client5,
 .client6{
        fill: var(--border-basic-color);
-       transition: fill 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+       transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
         
 }
 .footer {
@@ -709,6 +716,53 @@ img{
         letter-spacing: 0.03em;
         color: var(--second-color);
 }
+.backdrop{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color:rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-hidden .modal{
+    transform: translate(-50%, -50%) scale(0);
+}
+.modal{
+    position: absolute;
+    width: 528px;
+    min-height: 581px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #999999;
+    border-radius: 50%;
+    background-color: transparent;
+    right: 8px;
+    top: 8px;
+    /* align-items: center;
+    justify-content: center;
+    display: flex; */
+}
+.is-hidden{
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+.close-btn{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+    
+
 /*color синій logo 2196F3*/
 /*color FFFFFF*/
 /*color синій 2196F3*/
